@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "tdedahaks-4425"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "tdedahaks-4425"
+  template:
+    metadata:
+      labels:
+        app: "tdedahaks-4425"
+    spec:
+      containers:
+        - name: "tdedahaks-4425"
+          image: "deepak2121.azurecr.io/tdedahaks4425"
+          ports:
+          - containerPort: 4000
